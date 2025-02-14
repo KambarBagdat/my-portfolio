@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagdat Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><button class="tab-button active" data-section="home">Главная</button></li>
+                <li><button class="tab-button" data-section="about">Обо мне</button></li>
+                <li><button class="tab-button" data-section="portfolio">Портфолио</button></li>
+                <li><button class="tab-button" data-section="pricing">Расценки</button></li>
+                <li><button class="tab-button" data-section="projects">Личные проекты</button></li>
+                <li><button class="tab-button" data-section="contacts">Контакты</button></li>
+            </ul>
+            <div class="controls language-switcher">
+                <button id="switch-theme">🌙</button>
+                <button id="switch-to-en">EN</button>
+                <button id="switch-to-ru">RU</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="tab-content active">
+            <h1>Добро пожаловать на сайт Bagdat Digital!</h1>
+            <img src="images/avatar.jpg" alt="Avatar" class="avatar">
+            <p class="ru">Я создаю ботов для Telegram и Discord с интеграцией ИИ, используя библиотеки Transformers и OpenCV.</p>
+            <p class="en" style="display: none;">I create bots for Telegram and Discord with AI integration using Transformers and OpenCV.</p>
+        </section>
+
+        <section id="about" class="tab-content">
+            <h2 class="ru">Обо мне</h2>
+            <h2 class="en" style="display: none;">About Me</h2>
+            <p class="ru">Привет! Меня зовут Багдат, и я занимаюсь разработкой телеграм-ботов, визуальных новелл и изучением современных технологий. В своих проектах я постоянно внедряю новые инструменты, расширяя их функциональность и улучшая пользовательский опыт.
+
+Я работаю с такими технологиями, как Python, Ren'Py, а также активно использую библиотеки Transformers, OpenCV, OpenAI, PyTelegramBotAPI и Disnake. Они помогают мне реализовывать передовые решения в области искусственного интеллекта, компьютерного зрения, обработки естественного языка и разработки чат-ботов.
+
+Разработка телеграм-ботов — одно из моих ключевых направлений. Я создаю ботов, которые автоматизируют различные процессы: управление сообществами, интеграцию с сервисами и разработку интерактивных механик. Также я работаю над ботами для Discord, используя Disnake для создания игровых систем, умных ассистентов и чат-менеджеров.
+
+Я постоянно изучаю новые технологии, анализирую современные тенденции и стараюсь внедрять передовые подходы в свои проекты. Разбираясь в сложных системах, я нахожу нестандартные решения, оптимизирую код и стремлюсь сделать свои разработки ещё более эффективными и удобными.</p>
+            <p class="en" style="display: none;">Hi! My name is Bagdat, and I specialize in developing Telegram bots, visual novels, and exploring modern technologies. In my projects, I constantly integrate new tools, expanding their functionality and enhancing the user experience.
+
+I work with technologies such as Python, Ren'Py, and actively use libraries like Transformers, OpenCV, OpenAI, PyTelegramBotAPI, and Disnake. These help me implement advanced solutions in artificial intelligence, computer vision, natural language processing, and chatbot development.
+
+Developing Telegram bots is one of my key areas of focus. I create bots that automate various processes, such as community management, service integration, and interactive mechanics. I also develop Discord bots, using Disnake to build game systems, smart assistants, and chat managers.
+
+I constantly study new technologies, analyze current trends, and strive to incorporate cutting-edge approaches into my projects. By understanding complex systems, I find unconventional solutions, optimize code, and aim to make my developments even more efficient and user-friendly.</p>
+        </section>
+
+        <section id="portfolio" class="tab-content">
+        <h2 class="ru">ИИ-проекты</h2>
+        <h2 class="en" style="display: none;">AI Projects</h2>
+
+        <div class="portfolio-item">
+            <h3>Discord AI Bot</h3>
+            <p class="ru">Этот бот модерирует чат и отвечает на вопросы.</p>
+            <p class="en" style="display: none;">AI-powered Discord bot for automation, moderation, and intelligent responses.</p>
+            <button class="details-btn" data-target="modal-discord">Подробнее</button>
+        </div>
+
+        <div class="portfolio-item">
+            <h3>Telegram AI Assistant</h3>
+            <p class="ru">Бот-помощник с ИИ, интеграция с ChatGPT.</p>
+            <p class="en" style="display: none;">Telegram bot assistant with AI, integrated with ChatGPT.</p>
+            <button class="details-btn" data-target="modal-telegram">Подробнее</button>
+        </div>
+
+        <div class="portfolio-item">
+            <h3>AI Image Recognition</h3>
+            <p class="ru">Бот распознаёт изображения с помощью OpenCV.</p>
+            <p class="en" style="display: none;">Bot recognizes images using OpenCV and AI.</p>
+            <button class="details-btn" data-target="modal-vision">Подробнее</button>
+        </div>
+    </section>
+
+    <!-- Модальные окна -->
+    <div id="modal-discord" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Discord AI Bot</h2>
+            <video controls>
+                <source src="videos/DVideo.mp4" type="video/mp4">
+            </video>
+            <img src="images/Cod/Dcod1.png" alt="Код Discord бота">
+            <img src="images/Cod/Dcod2.png" alt="Код Discord бота">
+            <img src="images/scrins/Dscrin.png" alt="Демонстрация Discord бота">
+            <p class="ru">
+Этот Discord-бот с искусственным интеллектом улучшает управление сервером с помощью автоматизации, модерации и интерактивных AI-ответов. Разработанный с использованием Python, Disnake и OpenAI, он предлагает:
+
+Автоматическую фильтрацию сообщений – мгновенно обнаруживает и удаляет нежелательные слова, поддерживая безопасную и уважительную атмосферу в чате.
+
+Ответы на основе AI – пользователи могут задавать вопросы с помощью команды !ask, а бот генерирует умные и уместные ответы.
+
+Генерацию креативного текста – предлагает идеи, текстовые подсказки и полезные инсайты для создателей контента и разработчиков.
+
+Простую интеграцию – легко адаптируется для игровых сообществ, учебных групп и бизнес-серверов.
+
+
+С этим ботом управление и взаимодействие в Discord-сообществе становится проще, обеспечивая умную автоматизацию и мгновенные AI-ответы.</p>
+            <p class="en" style="display: none;">
+This AI-powered Discord bot enhances server management with automation, moderation, and interactive AI responses. Developed using Python, Disnake, and OpenAI, it offers:
+
+Automatic message filtering – instantly detects and removes inappropriate words to maintain a safe and respectful chat environment.
+
+AI-based responses – users can ask questions using !ask, and the bot will generate intelligent, relevant answers.
+
+Creative text generation – provides ideas, writing prompts, and useful insights for content creators and developers.
+
+Effortless integration – easily adaptable for gaming communities, study groups, or business servers.
+
+
+With this bot, managing and engaging a Discord community becomes seamless, allowing for smarter automation and real-time AI interactions.</p>
+        </div>
+    </div>
+
+    <div id="modal-telegram" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Telegram AI Assistant</h2>
+            <video controls>
+                <source src="videos/AIVideo.mp4" type="video/mp4">
+            </video>
+            <img src="images/Cod/Cod1.png" alt="Код Telegram бота">
+            <img src="images/Cod/Cod2.png" alt="Код Telegram бота">
+            <img src="images/Cod/Cod3.png" alt="Код Telegram бота">
+            <img src="images/scrins/AIScrin1.jpg" alt="Демонстрация Telegram бота">
+            <img src="images/scrins/AIScrin2.jpg" alt="Демонстрация Telegram бота">
+            <p class="ru">Этот Telegram-бот создан на основе GPT и способен вести живые беседы, генерировать осмысленные ответы, писать код, решать математические задачи и помогать в различных сферах. Он подходит как для личного использования, так и для бизнеса, предоставляя быстрые и точные ответы на любые вопросы.
+
+Основные функции бота:
+
+Ведение осмысленных диалогов
+
+Генерация текстов на разные темы
+
+Написание и исправление кода
+
+Решение математических задач
+
+Поиск информации и выдача ответов
+
+Интерактивный помощник для различных задач
+
+
+Бот работает автоматически: достаточно отправить сообщение, и он мгновенно сгенерирует ответ. Благодаря интеграции с передовыми AI-моделями, бот имитирует человеческую речь и адаптируется к собеседнику, делая общение естественным и удобным.
+
+Краткое описание для сайта
+
+🚀 Умный Telegram-бот на основе GPT!
+
+Этот AI-бот ведет живые диалоги, пишет код, решает задачи и мгновенно отвечает на вопросы. Просто напишите ему, и он сразу же поможет! Идеально подходит для личного использования и бизнеса.
+
+Попробуйте прямо сейчас! 💬</p>
+            <p class="en" style="display: none;">
+This Telegram bot is built using GPT and can hold real conversations, generate meaningful responses, write code, solve math problems, and assist in various tasks. It is suitable for both personal use and business, providing fast and accurate answers to any questions.
+
+Main features of the bot:
+
+Conducting meaningful dialogues
+
+Text generation on various topics
+
+Writing and fixing code
+
+Solving math problems
+
+Information retrieval and providing answers
+
+Interactive assistant for various tasks
+
+
+The bot works automatically: simply send a message, and it will instantly generate a response. Thanks to integration with advanced AI models, the bot mimics human speech and adapts to the user, making communication natural and convenient.
+</p>
+        </div>
+    </div>
+
+    <div id="modal-vision" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>AI Image Recognition</h2>
+            <video controls>
+                <source src="videos/OpenVideo.mp4" type="video/mp4">
+            </video>
+            <img src="images/Cod/Acod1.png" alt="Код Image Recognition">
+            <img src="images/Cod/Acod2.png" alt="Код Image Recognition">
+            <img src="images/scrins/OpenScrin1.jpg" alt="Демонстрация Image Recognition">
+            <img src="images/scrins/OpenScrin2.jpg" alt="Демонстрация Image Recognition">
+            <img src="images/scrins/OpenScrin3.jpg" alt="Демонстрация Image Recognition">
+            <img src="images/scrins/OpenScrin4.jpg" alt="Демонстрация Image Recognition">
+            <p class="ru">Полное описание бота
+
+Этот Telegram-бот позволяет пользователям применять стильные фильтры к фотографиям с помощью OpenCV. Он прост в использовании и работает прямо в чате, без установки дополнительных приложений.
+
+Функции бота:
+
+Четыре фильтра:
+
+🎭 Noir – черно-белый с повышенной резкостью.
+
+🟦 Pixel Art – эффект пиксельного изображения.
+
+🎨 Anime Style – стилизация под аниме.
+
+📼 VHS Effect – эффект старой видеозаписи.
+
+
+Быстрая обработка изображений.
+
+Удобное управление с помощью кнопок.
+
+
+Технологии:
+
+Python, Telebot, OpenCV, NumPy
+
+Разработка заняла около 5 часов
+
+
+Стоимость разработки:
+Подобный бот можно создать за $50–150, в зависимости от сложности и дополнительных функций.
+
+
+---
+
+Краткое описание бота
+
+Этот Telegram-бот позволяет быстро обработать фото с помощью OpenCV и наложить фильтры: Noir, Pixel Art, Anime, VHS. Удобно, быстро, бесплатно!</p>
+            <p class="en" style="display: none;">Full Description of the Bot
+
+This Telegram bot allows users to apply stylish filters to photos using OpenCV. It is easy to use and works directly in the chat without requiring any additional app installation.
+
+Bot Features:
+
+Four filters:
+
+🎭 Noir – Black and white with enhanced sharpness.
+
+🟦 Pixel Art – Pixelated image effect.
+
+🎨 Anime Style – Anime-style image processing.
+
+📼 VHS Effect – Retro VHS-style effect.
+
+Fast image processing.
+
+Easy control with interactive buttons.
+
+
+Technologies:
+
+Python, Telebot, OpenCV, NumPy
+
+Development time: around 5 hours
+
+
+Development Cost:
+A similar bot can be created for $50–150, depending on complexity and additional features.
+
+
+---
+
+Short Description of the Bot
+
+This Telegram bot quickly processes photos using OpenCV and applies filters: Noir, Pixel Art, Anime, and VHS. Convenient, fast, and free!</p>
+        </div>
+    </div>
+
+        <section id="pricing" class="tab-content">
+            <h2 class="ru">Расценки</h2>
+            <h2 class="en" style="display: none;">Pricing</h2>
+            <div class="pricing-category">
+                <h3>Простые боты</h3>
+                <p>Ответы на команды, автоответы, рассылка, простая админ-панель.</p>
+                <p><strong>Цена:</strong> от $10 – $50</p>
+                <p><strong>Срок:</strong> 1–3 дня</p>
+            </div>
+            <div class="pricing-category">
+                <h3>Боты средней сложности</h3>
+                <p>Интеграция с API, управление пользователями, базы данных.</p>
+                <p><strong>Цена:</strong> от $50 – $150</p>
+                <p><strong>Срок:</strong> 3–7 дней</p>
+            </div>
+            <div class="pricing-category">
+                <h3>Боты с интеграцией ИИ</h3>
+                <p>ChatGPT, анализ текста, автоматическая модерация.</p>
+                <p><strong>Цена:</strong> от $150 – $500</p>
+                <p><strong>Срок:</strong> 7–14 дней</p>
+            </div>
+            <div class="pricing-category">
+                <h3>Боты с компьютерным зрением</h3>
+                <p>Распознавание изображений, видеоанализ, Face Recognition.</p>
+                <p><strong>Цена:</strong> от $300 – $1000</p>
+                <p><strong>Срок:</strong> 10–20 дней</p>
+            </div>
+            <div class="pricing-category">
+                <h3>Сложные мультифункциональные боты</h3>
+                <p>ИИ + компьютерное зрение + голосовые команды.</p>
+                <p><strong>Цена:</strong> от $500 – $5000+</p>
+                <p><strong>Срок:</strong> 20+ дней</p>
+            </div>
+        </section>
+
+        <section id="projects" class="tab-content">
+            <h2 class="ru">Личные проекты</h2>
+            <h2 class="en" style="display: none;">Personal Projects</h2>
+            <div class="project-item">
+                <h3 class="ru">Точка Пересечения</h3>
+                <h3 class="en" style="display: none;">Point of Intersection</h3>
+                <p class="ru">
+Описание:
+В этом напряжённом детективном триллере игроку предстоит погрузиться в мир загадок, манипуляций и скрытых заговоров. Вас ждёт увлекательное расследование, в котором каждый выбор влияет на развитие истории. Политические интриги, теневые организации и моральные дилеммы — сможете ли вы докопаться до истины, или сами станете частью игры, где нет чёрного и белого?
+
+Приготовьтесь к сложным решениям, которые изменят не только ход расследования, но и самого героя. Каждая встреча, каждое действие и даже самые незначительные детали могут привести к неожиданным последствиям. Ваша логика, интуиция и внимательность — ключи к разгадке великого заговора.
+
+Особенности:
+✔ Многослойный сюжет с глубокой атмосферой.
+✔ Разветвлённые диалоги и несколько концовок.
+✔ Интерактивные элементы и мини-игры.
+✔ Уникальные персонажи с проработанными характерами.
+
+Готовы ли вы погрузиться в эту тёмную историю и испытать себя? Ответ придётся искать в самой игре.(Точные сроки неизвестны, но скоро я объявлю точную дату выхода!)
+                </p>
+                <p class="en" style="display: none;">
+
+Description:
+In this intense detective thriller, players will dive into a world of mysteries, manipulations, and hidden conspiracies. Every choice you make influences the course of the story, shaping the fate of both the investigation and the protagonist. Political intrigue, shadowy organizations, and moral dilemmas—will you uncover the truth, or will you become part of a game where nothing is purely black or white?
+
+Prepare for difficult decisions that will not only alter the investigation but also change the very nature of the protagonist. Every encounter, every action, and even the smallest details can lead to unexpected consequences. Your logic, intuition, and keen eye for detail are the keys to unraveling a grand conspiracy.
+
+Features:
+
+✔ A multi-layered narrative with a deep and immersive atmosphere.
+✔ Branching dialogues and multiple endings.
+✔ Interactive elements and mini-games.
+✔ Unique characters with rich personalities and complex motivations.
+
+Are you ready to step into this dark story and put yourself to the test? The answers await within the game itself.(The exact dates are unknown, but I will anncounce the exact time very soon!)
+                </p>
+                <p>
+                    <strong class="ru">Жанры:</strong> Детектив, триллер, психологическая драма, интерактивный нуар.
+                </p>
+                <p>
+                    <strong class="en" style="display: none;">Genres:</strong> Detective, thriller, psychological drama, Interactive Noir.
+                </p>
+            </div>
+        </section>
+
+        <section id="contacts" class="tab-content">
+    <h2 class="ru">Контакты</h2>
+    <h2 class="en" style="display: none;">Contacts</h2>
+
+    <div class="social-links">
+        <a href="https://www.youtube.com/@EduZoneShortvideo" target="_blank">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.tiktok.com/@bagdat_telegrambot" target="_blank">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://wa.me/message/YOUR_WHATSAPP_ID" target="_blank" class="whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bagdat Digital</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
