@@ -342,81 +342,52 @@ footer {
 
 .social-links a:nth-child(1) { background: #ff0000; } /* YouTube */
 .social-links a:nth-child(2) { background: #000000; } /* TikTok */
-/* Скрываем стандартное меню на мобильных устройствах */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* Обычное меню скрыто */
-    }
-    .burger-icon {
-        display: block; /* Показываем иконку бургер-меню */
-        font-size: 30px;
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-    .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100%;
-        background: #333;
-        color: white;
-        padding: 20px;
-        transform: translateX(100%);
-        transition: transform 0.3s;
-    }
-    .mobile-menu.active {
-        transform: translateX(0);
-    }
-}
-/* Скрываем бургер-меню на ПК */
-.burger-icon,
+/* Бургер-меню по умолчанию скрыто */
 .mobile-menu {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    padding-top: 50px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    visibility: hidden; /* Скрываем визуально */
+    opacity: 0; /* Делаем прозрачным */
 }
 
-/* Показываем бургер-меню только на мобильных устройствах */
-@media (max-width: 768px) {
-    .burger-icon {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        background: #333;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        z-index: 1000;
-    }
+/* При активации показываем бургер-меню */
+.mobile-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+}
 
+/* Бургер-иконка */
+.burger-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Скрываем бургер-меню на ПК */
+@media (min-width: 769px) {
+    .burger-icon {
+        display: none;
+    }
     .mobile-menu {
         display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100vh;
-        background: #222;
-        color: white;
-        padding-top: 50px;
-        z-index: 999;
-    }
-
-    .mobile-menu a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        padding: 15px;
-        border-bottom: 1px solid gray;
-    }
-
-    .mobile-menu a:hover {
-        background: gray;
     }
 }
 .pricing-calculator {
