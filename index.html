@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Русский:
+Мой сайт — это портфолио, где представлены мои проекты в веб-разработке, создании Telegram-ботов и других направлениях. Здесь можно ознакомиться с моими работами, узнать больше обо мне, а также найти ссылки на социальные сети и способы связи.
+
+English:
+My website is a portfolio showcasing my projects in web development, Telegram bot creation, and other areas. Here, you can explore my work, learn more about me, and find links to my social media and contact options.">
+    <meta name="keywords" content="портфолио, веб-разработка, разработка сайтов, HTML, CSS, JavaScript, создание Telegram-ботов, программирование, проекты, фриланс, IT, разработчик,
+portfolio, web development, website creation, HTML, CSS, JavaScript, Telegram bot development, programming, projects, freelance, IT, developer">
     <title>Bagdat Digital</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,6 +23,9 @@
                 <li><button class="tab-button" data-section="portfolio">Портфолио</button></li>
                 <li><button class="tab-button" data-section="pricing">Расценки</button></li>
                 <li><button class="tab-button" data-section="projects">Личные проекты</button></li>
+                <li><button class="tab-button" data-section="reviews-faq">Отзывы и FAQ</button></li>
+                <li><button class="tab-button" data-section="courses">Курсы 🔒</button></li>
+                <li><button class="tab-button" data-section="news-updates">Новости 📢</button></li>
                 <li><button class="tab-button" data-section="contacts">Контакты</button></li>
             </ul>
             <div class="controls language-switcher">
@@ -25,10 +35,10 @@
             </div>
         </nav>
     </header>
-
     <main id="main-content">
         <section id="home" class="tab-content active">
-            <h1>Добро пожаловать на сайт Bagdat Digital!</h1>
+            <h1 class="ru">Добро пожаловать на сайт Bagdat Digital!</h1>
+            <h1 class="en" style="display: none;">Welcome to Bagdat Digital!</h1>
             <img src="images/avatar.jpg" alt="Avatar" class="avatar">
             <p class="ru">Я создаю ботов для Telegram и Discord с интеграцией ИИ, используя библиотеки Transformers и OpenCV.</p>
             <p class="en" style="display: none;">I create bots for Telegram and Discord with AI integration using Transformers and OpenCV.</p>
@@ -274,38 +284,97 @@ This Telegram bot quickly processes photos using OpenCV and applies filters: Noi
         <section id="pricing" class="tab-content">
             <h2 class="ru">Расценки</h2>
             <h2 class="en" style="display: none;">Pricing</h2>
-            <div class="pricing-category">
-                <h3>Простые боты</h3>
-                <p>Ответы на команды, автоответы, рассылка, простая админ-панель.</p>
-                <p><strong>Цена:</strong> от $10 – $50</p>
-                <p><strong>Срок:</strong> 1–3 дня</p>
+        
+            <p class="ru">Здесь представлены мои тарифы и условия работы.</p>
+            <p class="en" style="display: none;">Here are my rates and terms of work.</p>
+
+            <div class="pricing-container">
+                <div class="pricing-category">
+                    <h3 class="ru">Простые боты</h3>
+                    <h3 class="en" style="display: none;">Simple Bots</h3>
+                    <p class="ru">Ответы на команды, автоответы, рассылка, простая админ-панель.</p>
+                    <p class="en" style="display: none;">Command responses, auto-replies, mailing, simple admin panel.</p>
+                    <p><strong class="ru">Цена:</strong><strong class="en" style="display: none;">Price:</strong> $10 – $50</p>
+                    <p><strong class="ru">Срок:</strong><strong class="en" style="display: none;">Duration:</strong> 1–3 дня</p>
+                </div>
+
+                <div class="pricing-category">
+                    <h3 class="ru">Боты средней сложности</h3>
+                    <h3 class="en" style="display: none;">Medium Complexity Bots</h3>
+                    <p class="ru">Интеграция с API, управление пользователями, базы данных.</p>
+                    <p class="en" style="display: none;">API integration, user management, databases.</p>
+                    <p><strong class="ru">Цена:</strong><strong class="en" style="display: none;">Price:</strong> $50 – $150</p>
+                    <p><strong class="ru">Срок:</strong><strong class="en" style="display: none;">Duration:</strong> 3–7 дней</p>
+                </div>
+
+                <div class="pricing-category">
+                    <h3 class="ru">Боты с интеграцией ИИ</h3>
+                    <h3 class="en" style="display: none;">AI-Integrated Bots</h3>
+                    <p class="ru">ChatGPT, анализ текста, автоматическая модерация.</p>
+                    <p class="en" style="display: none;">ChatGPT, text analysis, automatic moderation.</p>
+                    <p><strong class="ru">Цена:</strong><strong class="en" style="display: none;">Price:</strong> $150 – $500</p>
+                    <p><strong class="ru">Срок:</strong><strong class="en" style="display: none;">Duration:</strong> 7–14 дней</p>
+                </div>
+
+                <div class="pricing-category">
+                    <h3 class="ru">Боты с компьютерным зрением</h3>
+                    <h3 class="en" style="display: none;">Computer Vision Bots</h3>
+                    <p class="ru">Распознавание изображений, видеоанализ, Face Recognition.</p>
+                    <p class="en" style="display: none;">Image recognition, video analysis, Face Recognition.</p>
+                    <p><strong class="ru">Цена:</strong><strong class="en" style="display: none;">Price:</strong> $300 – $1000</p>
+                    <p><strong class="ru">Срок:</strong><strong class="en" style="display: none;">Duration:</strong> 10–20 дней</p>
+                </div>
+
+                <div class="pricing-category">
+                    <h3 class="ru">Сложные мультифункциональные боты</h3>
+                    <h3 class="en" style="display: none;">Complex Multifunctional Bots</h3>
+                    <p class="ru">ИИ + компьютерное зрение + голосовые команды.</p>
+                    <p class="en" style="display: none;">AI + computer vision + voice commands.</p>
+                    <p><strong class="ru">Цена:</strong><strong class="en" style="display: none;">Price:</strong> $500 – $5000+</p>
+                    <p><strong class="ru">Срок:</strong><strong class="en" style="display: none;">Duration:</strong> 20+ дней</p>
+                </div>
             </div>
-            <div class="pricing-category">
-                <h3>Боты средней сложности</h3>
-                <p>Интеграция с API, управление пользователями, базы данных.</p>
-                <p><strong>Цена:</strong> от $50 – $150</p>
-                <p><strong>Срок:</strong> 3–7 дней</p>
-            </div>
-            <div class="pricing-category">
-                <h3>Боты с интеграцией ИИ</h3>
-                <p>ChatGPT, анализ текста, автоматическая модерация.</p>
-                <p><strong>Цена:</strong> от $150 – $500</p>
-                <p><strong>Срок:</strong> 7–14 дней</p>
-            </div>
-            <div class="pricing-category">
-                <h3>Боты с компьютерным зрением</h3>
-                <p>Распознавание изображений, видеоанализ, Face Recognition.</p>
-                <p><strong>Цена:</strong> от $300 – $1000</p>
-                <p><strong>Срок:</strong> 10–20 дней</p>
-            </div>
-            <div class="pricing-category">
-                <h3>Сложные мультифункциональные боты</h3>
-                <p>ИИ + компьютерное зрение + голосовые команды.</p>
-                <p><strong>Цена:</strong> от $500 – $5000+</p>
-                <p><strong>Срок:</strong> 20+ дней</p>
+            <div class="pricing-calculator">
+                <h3 class="ru">Калькулятор стоимости</h3>
+                <h3 class="en" style="display: none;">Pricing Calculator</h3>
+
+                <form id="botCalculator">
+                    <fieldset>
+                        <legend class="ru">Выберите платформу</legend>
+                        <legend class="en" style="display: none;">Choose Platform</legend>
+                        <label><input type="checkbox" name="platform" value="telegram"> <span class="ru">Telegram</span><span class="en" style="display: none;">Telegram</span></label>
+                        <label><input type="checkbox" name="platform" value="discord"> <span class="ru">Discord</span><span class="en" style="display: none;">Discord</span></label>
+                        <label><input type="checkbox" name="platform" value="other"> <span class="ru">Другое</span><span class="en" style="display: none;">Other</span></label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="ru">Основные функции</legend>
+                        <legend class="en" style="display: none;">Main Features</legend>
+                        <label><input type="checkbox" name="feature" value="auto" data-price="50"> <span class="ru">Автоответы, рассылки (+$50)</span><span class="en" style="display: none;">Auto-replies, newsletters (+$50)</span></label>
+                        <label><input type="checkbox" name="feature" value="db" data-price="100"> <span class="ru">База данных (+$100)</span><span class="en" style="display: none;">Database (+$100)</span></label>
+                        <label><input type="checkbox" name="feature" value="api" data-price="150"> <span class="ru">Интеграция с API (+$150)</span><span class="en" style="display: none;">API Integration (+$150)</span></label>
+                        <label><input type="checkbox" name="feature" value="ai" data-price="500"> <span class="ru">Интеграция AI (+$500)</span><span class="en" style="display: none;">AI Integration (+$500)</span></label>
+                        <label><input type="checkbox" name="feature" value="vision" data-price="1000"> <span class="ru">Компьютерное зрение (+$1000)</span><span class="en" style="display: none;">Computer Vision (+$1000)</span></label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="ru">Дополнительные опции</legend>
+                        <legend class="en" style="display: none;">Additional Options</legend>
+                        <label><input type="checkbox" name="option" value="admin" data-price="150"> <span class="ru">Админ-панель (+$150)</span><span class="en" style="display: none;">Admin Panel (+$150)</span></label>
+                        <label><input type="checkbox" name="option" value="auth" data-price="100"> <span class="ru">Авторизация (+$100)</span><span class="en" style="display: none;">Authentication (+$100)</span></label>
+                        <label><input type="checkbox" name="option" value="log" data-price="150"> <span class="ru">Логирование (+$150)</span><span class="en" style="display: none;">Logging (+$150)</span></label>
+                        <label><input type="checkbox" name="option" value="lang" data-price="100"> <span class="ru">Многоязычность (+$100)</span><span class="en" style="display: none;">Multilingual Support (+$100)</span></label>
+                        <label><input type="checkbox" name="option" value="support" data-price="50"> <span class="ru">Поддержка (ежемесячно +$50)</span><span class="en" style="display: none;">Support (monthly +$50)</span></label>
+                    </fieldset>
+
+                    <p>
+                        <strong class="ru">Итоговая цена:</strong>
+                        <strong class="en" style="display: none;">Total Price:</strong>
+                        $<span id="totalPrice">0</span>
+                    </p>
+                </form>
             </div>
         </section>
-
         <section id="projects" class="tab-content">
             <h2 class="ru">Личные проекты</h2>
             <h2 class="en" style="display: none;">Personal Projects</h2>
@@ -342,36 +411,169 @@ Features:
 
 Are you ready to step into this dark story and put yourself to the test? The answers await within the game itself.(The exact dates are unknown, but I will anncounce the exact time very soon!)
                 </p>
-                <p>
-                    <strong class="ru">Жанры:</strong> Детектив, триллер, психологическая драма, интерактивный нуар.
-                </p>
-                <p>
-                    <strong class="en" style="display: none;">Genres:</strong> Detective, thriller, psychological drama, Interactive Noir.
-                </p>
+                <p class="ru">Жанры: детектив, психологическая драмма, триллер, интерактивный нуар.</p>
+                <p class="en" style="display: none;">Genres: detective, psychological drama, thriller, interactive noir</p>
+            </div>
+            <h3 class="ru">Мини-игра</h3>
+            <h3 class="en" style="display: none;">Mini-game</h3>
+            <!-- Кнопка запуска игры -->
+            <button id="start-game" class="game-button">Собери Telegram-бота</button>
+
+            <!-- Модальное окно игры -->
+            <div id="game-modal" class="game-modal">
+                <div class="game-content">
+                    <span class="close">&times;</span>
+                    <h3>Выбери модули для Telegram-бота:</h3>
+                    <label><input type="checkbox" id="module-commands"> Команды /start, /help</label><br>
+                    <label><input type="checkbox" id="module-payments"> Оплата через бота</label><br>
+                    <label><input type="checkbox" id="module-ai"> ИИ-ответы</label><br>
+                    <label><input type="checkbox" id="module-spam"> Спам-рассылка ❌</label><br>
+
+                    <button id="submit-game">Собрать бота</button>
+                    <p id="game-result"></p>
+                </div>
             </div>
         </section>
 
-        <section id="contacts" class="tab-content">
-    <h2 class="ru">Контакты</h2>
-    <h2 class="en" style="display: none;">Contacts</h2>
+        <section id="reviews-faq" class="tab-content">
+            <h2 class="ru">Отзывы и FAQ</h2>
+            <h2 class="en" style="display: none;">Reviews & FAQ</h2>
 
-    <div class="social-links">
-        <a href="https://www.youtube.com/@EduZoneShortvideo" target="_blank">
-            <i class="fab fa-youtube"></i> YouTube
-        </a>
-        <a href="https://www.tiktok.com/@bagdat_telegrambot" target="_blank">
-            <i class="fab fa-tiktok"></i> TikTok
-        </a>
-        <a href="https://wa.me/message/YOUR_WHATSAPP_ID" target="_blank" class="whatsapp">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-    </div>
-</section>
+            <h3 class="ru">Часто задаваемые вопросы</h3>
+            <h3 class="en" style="display: none;">Frequently Asked Questions</h3>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="ru">Как заказать бота?</span>
+                        <span class="en" style="display: none;">How to order a bot?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="ru">Вы можете написать мне в Telegram или на Fiverr, обсудить детали и выбрать тариф.</span>
+                        <span class="en" style="display: none;">You can contact me via Telegram or Fiverr, discuss details, and choose a tariff.</span>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="ru">Сколько стоит разработка?</span>
+                        <span class="en" style="display: none;">How much does development cost?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="ru">Цена зависит от сложности бота. Подробнее смотрите в разделе "Расценки".</span>
+                        <span class="en" style="display: none;">The price depends on the bot's complexity. See the "Pricing" section for details.</span>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="ru">Как долго занимает разработка?</span>
+                        <span class="en" style="display: none;">How long does development take?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="ru">Сроки зависят от сложности. Простые боты — 1-3 дня, сложные — от 20 дней.</span>
+                        <span class="en" style="display: none;">Time depends on complexity. Simple bots take 1-3 days, complex ones from 20 days.</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="ru">Отзывы клиентов</h3>
+            <h3 class="en" style="display: none;">Client Reviews</h3>
+            <div class="reviews-container">
+                <div class="review-item">
+                    <p class="ru">"Всё круто, но цена могла бы быть чуть ниже." – Алексей</p>
+                    <p class="en" style="display: none;">"Everything is great, but the price could be a bit lower." – Alexey</p>
+                </div>
+                <div class="review-item">
+                    <p class="ru">"Работает отлично, но хотелось бы больше документации по настройке." – Екатерина</p>
+                    <p class="en" style="display: none;">"Works great, but I wish there was more documentation on setup." – Ekaterina</p>
+                </div>
+                <div class="review-item">
+                    <p class="ru">"Бот работает хорошо, но мне пришлось самому немного подстроить настройки. В целом, хорошая работа!" – Джон</p>
+                    <p class="en" style="display: none;">"The bot works well, but I had to tweak some settings myself. Overall, good work!" – John</p>
+                </div>
+                <div class="review-item">
+                    <p class="ru">"Быстрая разработка! Вначале были небольшие проблемы, но продавец их быстро исправил." – Хироши</p>
+                    <p class="en" style="display: none;"> "Fast development! Some minor issues at first, but the seller fixed them quickly." – Hiroshi</p>
+                </div>
+                <div class="review-item">
+                    <p class="ru">"Бот хороший, хотя заняло чуть больше времени, чем ожидал." – Карлос</p>
+                    <p class="en" style="display: none;"> "The bot is good, although it took a bit longer than expected." – Carlos</p>
+                </div>
+                <div class="review-item">
+                    <p class="ru">"Отличный сервис! Общение могло бы быть лучше, но сам бот потрясающий." – Фатима</p>
+                    <p class="en" style="display: none;"> "Great service! Communication could be better, but the bot itself is amazing" – Fatima</p>
+                </div>
+            </div>
+        </section>
+        <section id="courses" class="tab-content">
+            <h2 class="ru">Курсы</h2>
+            <h2 class="en" style="display: none;">Courses</h2>
+
+            <div class="course-locked">
+                <p class="ru">Скоро здесь появятся курсы! Следите за обновлениями.</p>
+                <p class="en" style="display: none;">Courses coming soon! Stay tuned.</p>
+                <div class="lock-icon">🔒</div>
+            </div>
+        </section>
+        <section id="news-updates" class="tab-content" style="display: none;">
+            <h2 class="ru">Новости и обновления</h2>
+            <h2 class="en" style="display: none;">News & Updates</h2>
+
+            <div class="news-container">
+                <article class="news-item">
+                    <h3 class="ru">🔹 Новый курс по созданию Telegram-ботов</h3>
+                    <h3 class="en" style="display: none;">🔹 New Course on Creating Telegram Bots</h3>
+                    <p class="ru">Скоро выйдет курс по разработке ботов. Подробности в ближайшее время!</p>
+                    <p class="en" style="display: none;">A course on bot development is coming soon. Stay tuned for details!</p>
+                    <span class="news-date">23.02.2025</span>
+                </article>
+
+                <article class="news-item">
+                    <h3 class="ru">🚀 Улучшение сайта</h3>
+                    <h3 class="en" style="display: none;">🚀 Website Improvements</h3>
+                    <p class="ru">Добавлены тёмная тема, калькулятор цен и FAQ.</p>
+                    <p class="en" style="display: none;">Dark theme, price calculator, and FAQ have been added.</p>
+                    <span class="news-date">22.02.2025</span>
+                </article>
+            </div>
+        </section>
+        <section id="contacts" class="tab-content">
+            <h2 class="ru">Контакты</h2>
+            <h2 class="en" style="display: none;">Contacts</h2>
+
+            <div class="social-links">
+                <a href="https://www.youtube.com/@EduZoneShortvideo" target="_blank">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a href="https://www.tiktok.com/@bagdat_telegrambot" target="_blank">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <a href="https://wa.me/message/YOUR_WHATSAPP_ID" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+
+            <!-- Кнопка для открытия Telegram-бота -->
+            <div class="telegram-bot">
+                <a href="https://t.me/YOUR_TELEGRAM_BOT" target="_blank" class="bot-button">
+                    <i class="fab fa-telegram"></i> Telegram-бот
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Bagdat Digital</p>
     </footer>
+
+    <!-- Бургер-иконка -->
+<div class="burger-icon" onclick="toggleMenu()">☰</div>
+
+<!-- Боковое меню -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#" onclick="toggleMenu()">Закрыть ✖</a>
+    <a href="#about">Обо мне</a>
+    <a href="#projects">Проекты</a>
+    <a href="#contact">Контакты</a>
+</div>
 
     <script src="scripts.js"></script>
 </body>
